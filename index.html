@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E STAR Engine Oil</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        nav a:hover {
+            color: #FFCC00;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhAQEBISEA8PDw8PDw8QEA8PDw8PFREWFhURFRUYHSggGBolGxUVITEhJSkrLi4uFx8zODMsNzQtLisBCgoKDg0NFxAQFy0dFR0vKy0rLS0tKy0rLTcrKy0tLS0rLSstKy0tLSsrKysrKy0tKy0tLSsrKy0tLSsrLSsvN//AABEIAKgBLAMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAEAAECAwUGBwj/xAA+EAABAwIDBgIIBAUCBwAAAAABAAIDBBEFEiEGEzFBUWEykRQiQlJxgaGxBxViwSNyouHwFjMkU2OCssLR/8QAGgEBAQEBAQEBAAAAAAAAAAAAAAECAwQFBv/EACgRAQEAAgICAQMCBwAAAAAAAAABAhEDIQQSMQVRYUHBEyJxobHR8f/aAAwDAQACEQMRAD8A8blnJVKLbRFWNoCrJpNgmuIREVUQlLSEIYhBrRTg8Vdu+ixGvIRtNWEcVdjSicQvRdh8YE0Ro5D68YLoCeLo+bPi3iOx7Lz2CRr/AIoqlkfE9ksZyvjcHMd0I/bsqzZt6LM0tdY8ijKesDGlx4AIc1bKiFtUzQOFnt/5cg8TPPzBBXE7UYyQzdNPi4/Bbl6cLju6C7X7RuqHloP8Np5c1y7pOQ5/ZKYkfuoRQkm2ty0ubbgbcR5LFu3eSSCKekIlEZBu8BzCebSL3H18iuldiTqJhZC4tqJm2JFrxxn7OP0CzMQxQhtIAxglpmEtm9beavDm31sbW4G49YoOmG9kMs7nFpcXSOHjefdb3PDstT7RizfdW0lFJKC6+WJnjmeTu2fpHvO7BW0+FPlv6Ox27bo6d41cfsPgF6Bszsa+rDJapu5pGD/h6Rnqgjjmd8evErsa/C42R5WtbHGxvAANa0dVZGblXhcuGiPueZKHLOVtTwA1K6zaTdscddTw09Y9CG8vifJc8wnxAWF+P9+aWLMrY16LZqcQuqpCyGFrc13u9Zx5NDRzPBaGGTeqFgV2KSyBjHuO7j8MY8IPvW5nuU9JVu4CwHVx/wA+ikZstejYVV8rrpI6g20Lr/pvf6arzShxJrMri7rdxs1t7ngSeluiLm/EWmjBaAZCeQzOb9VazMa7eWZ/MvP8zv2JXAfirSueylka31GOlZIRxD3hpbftZrkE78T7aMiIGvu/tZS/1kyqa+ORpAc2zg0nhe4JYbh1jbUEEW+RzdVvHG43bgHQO6JCI9F2D8Pbci2oNlEYe1Z07ezlGUzjyWzhlGRa612UbRyV7GAcFdJaeJtlaFEFOCjKYUgoXT5kRYCnVeZPmQTXX7OYm0NA6cQuNzJNkLTdpIPZB6XVV8b7XNrdNFUMRaNM64SPGHjxDN3GitGMjmD5InbjW2VgCGjeiGFHUz4weKzqug6LVslZBy8sJCqXR1NGHLFqaYtKlioQVBatyhrgdCudKnFKQVJR6Ls5iW6c6Mn+BUANf0Y/2ZP2PY9guax+4nc13smx81XQVtxYorEAJAC42eBYPtcOHIO537rTOu2I83v3utDDnFkbi0XkglhqoX2FmtDsrri2rToCOoHe4xpHcrOHVrg63y4rQw+olY3dtGXMJI94WZiIpbZ2Ec23AcOYN7cUKzaqQyvc8gAvd4W3DW3OgHZdvsNgIfJvXszxQXLRb1PVNszr8yeXYrl6jBpGTNhzMkc4sGeF29jGYji4cxfVdlRV8hcyGO4hhBaxrdC95GUveeZtf4LWPyxneunrUVU1rAT8GgcXG3ABcDtPtNJNJ6NSN3spNgWDPHGf0++4e8dByQlRiM1U8UdMb3GWWW5AyjxAHkwczxK7fBcFp6GIlpGbLeaofYEgcdT4W9vutOfy8/8A9FmNu+q355nHM5t8waf1H2j2+65nF5GtdkaLHkBq4j4cgvRtqsQG7c+ST0aD3nACom7RsPgHci/YeJeN4njguW07cjSdXuOZ7u5J1JUtkXGW1Odwbq8hg6cXFAS4pb/bFv1O1PkgHuJNyST1Kgudyd5ismnc83e4u+J08lCySe6yplr7PU13mQ6MaLE9z0+X3QdDRGQ38LB4n/sOpWzmsAxgysbwHM9z3ViVsuqgST1N1IThYBeU4mK0mnQtepgrCiqyj4Kq6JofdK6ra+6ldESulmUbproJ50+dVEpsyC/MlmQ5kUTUAc0NCrproJ1aFUcQCGmQ2WyuZVhYplKjvCpt0dNFOCrlzVPUkFbVLVBwVQUqaiAOCuTXQc/V0hCCIXUzRBwWJW0lipYoWGQgrZpqjMLFYRCvp5bFSUF1bdVGmqSFOV1wgxxVR0FLiZaWuHFrg4dLg3XRyYg00wEGhmkdc29dtg0ZfqfNcVAy66TZisZHJEJdGMmbIHHwjVtwenhurGco6fZuqZRtc6TQm2c2JcTyaBxJvoAOJRu0W27KdgfIA+oNjDTXBZB0c+2j5PoOXvHC2olayWaouN3FI6KnGhD5AwGWa3MNvlHdea1lY6R5e7UnrrZXLLUYxw3exOM4vNVyGSd5cSbgX0HYBZ+Xz+q1MDoWzOJkuWtIsAbC/P8AZdnRUUTB6jA34ABebLk1fy79R5+zD5XeGKQ98jgPqiIsAqXcIj83Mb9yvQS3si6Cgc9wsFZyTW70xcr+jyiroZInFkjHMcLaEdb2t1vY8OiOosJPiluByZwcfj0+67faScOk3bTdsOl7D/c9oj4cPNYdSLBdZ3Nm6AmlAsBYAaADQD4KkToSqebqDHqqMfMqjUKDNVq0VK0rjy8045268fFc2Z6SrYqyyMxDDW2uNCsNzSDZXi5seSbhycVwvbo6StBR4nC5KGUhF+lmy7bctOhdUhUvrgufdVFVmYomm8/EQh5MSWOXlRJU2umk/ECqHVhQzGE8ASr24fKfZKly0siDqgqG9Ktdh8o9h3kqHRuHEHyKntDVDplPKmsgiiKectKoISVHRUtTcIm65ynnstinqLhaQVdRmjDgkHJXQYdZTWKDXSTxBwWJVU9ipYpRSKDjqq2lOSoNGilWtG0Fc1G+y1aKsViVs1N5YxG42DWvAP8AMQb99QFzeI4U6HKTq11xcA2aehPdb7H3UnAEEEXB0IKWbSdOdwysdE7QZmk6t/8Andem7NYY+qaHMBDeZcC0D/Oyo2C2ZYWz1ZyObAQ0MdYubcXzkfv/AHXUHGcnrN5fK4X53zvqOWPLeLjx7nzXtw8fHLH2taVFspFHYyuLz7o9VvzPH7KnbXF2UVMI4Q1k1STHEGgXAGrpD2A69hzQ1FtW2V+UNcSOPDKPndee4/irqqrmmcbtjPo0I5BjD65HxdfXsnhTPm5pM/07rHLjMMfgL/nVQkFwkXqt0oX6N5GRW0uqByELdlmaUDNZRoLCxXPD26glVtlsUeyYELzcluN+Nx6OOe0+e0WVhc2zuKz6ka3Vk8luCoz3V48JLuJyZ2zVRATkqRKqJXdwSumuo3TEoqV0gVFKyDrdk2RFwz2+a9Tw+gpi0aN+i8Cilc03aSFp0+0dQzQPK8Xk+PnyXeNduPkmPy92kwumtwb9Fy2JYZT5zo36Lzh+1lSfbQUmNTuNy83Xnw8Lkl3a63mx0GyJixEAJEBfW08YRzFAhGOAVEgUVSiIJ7IcpBBsxVSIbKFhMfZXsqCrsbOdVVEQcEGypV7KhEZlRFYqlbE7A4LLmisVFV3U432VacFBq0tbZaDKsFc40qxspCu007TBMZdEZ2McQKqmmpnAX8TmHdm3UPt8iUEcbme0QtaQ8+qXdO65+kqDvI+f8SPTr6w0XojLSTBsWUgxRiaTdhrpHakuF7ltwQON9NV8nz/4eGfvcd2z/H/Xv8Xj9sLblrX7o4az0SjnqD4gw5CeLnnRvm4jzXDMq8rQ0HhxPU8z8zddr+JFQI4IKdumd+dw/TGNP6i3yXm90+ky5ceXNfnO/wBp1/tx8rLeWvs0H1xVLqooW6V19XbzLXTFRL1XdK6KkSpNfZVXTXUsJ0sc66a6hdJBIuTXUUlQ90yScILGBJzgoEpggm0XV7aUlQicAr21lkE46AoluGhC/mBTjEyr0gVsqZ0ipCdRUy9QJT2SyoIFMpkKNlAgnuop0Eg5WNkVKdUGRVFlOWzggLq2ORBW9tlFXSqkqBwU91FJBbG6xaejgfqvU9iIS5u8eS57yXOJ4knivKY+IXteyEOWIfC6+L9cz9eGfevT43zXA/iTWZ6tzBwhZHEPiRnd92eS5K6Oxuq308snJ8srweoLzl/pDUEI19PxeL+FwYYfaRwzy3lajdOrGwlWCnXoZDJ7IwU6Z7AEAuVRKse5VlAySSSBJJWThhUDKStjpXHkiWYcSroZ6k1q1mYUVezDwE0m2KWFQIW1NSoV1MmhnZU+VHbgJbtqaAbGq0MCqylK5RRAYEixD7wp96UE3MVbmp96lnQVlqVlZmCcEIKbJK7RKwQUpK/IE4iQVAqJCNjp009NbgmgEFY1l1EsKky4QEQQes3+YDzK9hgm3NDNL7lPI4fENJC8mon3fGOskY/rC9L2kkyYVNbi9scY/wC97W/uvh/V8ffk4cPvf3d+G6mVeYsp9Bf3W3+NhdWCFW2KWUr7sedERhObBPuSnFISgGlmsgpHkrYGGkqxmFBDbAylOIyulGGNVUlCByTRtix0biiY8LJWpC8N6IsTt6potZkWE9UZFhrQrH1rQqJMVAVTsYymaOSnlAWNJi/RCyYo4qbNOgfI0c0PJUtC559Y4qp0xKbNNuatagpawLOJKQCm1XyVJVRlKsZBdWijRTuGiGepMmVrbHiiKGMurhTKTXtCLinB0VABpioGEra3YKYwBNKxDGU2QraNMFE0oU0jGsUtVrmjUDRq6VmXKcPK0fQkvQFNIBbOQp+lHmi/y9ROHqgTehSEgVzqAqBoioL8PeDJGP8AqMPk4Feg7ayhtBC336iAeRzf+q89w6Eska63A31+I1XWbWVgmjpYWG5a4yG3IhhaP/JfI83G5eVw39J29HHP5L+XOtq2KxtYxYu4clunL7Dz6bwr2J/zJqwN05LdOTZpvHFGqDsVCxRA5SFK5Nmmk/FlTJihKGbQuVrcOKAZ9UU3pLkezCypHC1DbLMjjzULlapoLJNo+oVGWGqQiK2mUDVc2hCaNsEQFSFOVs1EQaOCy5alBX6OpNpioekqTKtAZBTFHsp9EFSVlytqF1wqlciyE9Cry0gcF7JFsvTP4DyKUmwsJ4fYKaNvE3BWwaFesT/h0w8CPJZ0/wCHLvZP1Q24yKcK9sgK259gZhwv90BNspUM5HyKG4HFlLKqXYbOzi0qTQ8eJp8lRbkT7tM2XqrWvCCAjUhGrG2U7IinIoOaiCFS8IKiEgxOU4UF7MCkkaJWOa27jGyMtJztFi55IOmunD2Spy7MVcYEkhjZHu5JA4Euc7INW2toSe61tnsTjj9WW+UXLXAXtc3IIWztNtFDLBHBAHGwOd7hlAB4tA4m+oXyN+RfKuGWG8Pvrr8PX7YTjmr24w0jeiiaJvRFpL7Dxg/Qm9E/obeiLTobCikb0T+jjopVNQGrNlriUVo7odlIMCyHVJtdVisKLpu5QlZYbMTIOq0KauDkTQp0QKpfTdFdmSBQBOjISbMQjiqnwAoAqlwcs5+HX4LWlpDyQpLmqLAP5W5Wx4QUfHX24q/8yamobqqlwqy1Y4QBZZUmMDkhnYwVU1R+HbVzxkBx812OE7al1gbea4+uoWOOlr9kqTCiNQbKHT2DDcS3lrfdb9NTZl5LgmMuhIDuC9LwDaBjwBcJSVs/lgQ82G/put+lka4XCJMY6Kbb1HDT4bEdHNHzAQM2zkDvZHyXbYlhrXA20PZcfK57HFpN7FWM2SMqo2IidwH0WLiH4fccn0XbxVpHFEMxAc/qjLx6q2MqWeEEoN2E1LOLCV7xFPG7or/Qon8QE2vb54keW6PaWnuFS+dvVe64vsdDKD6o8l5vtF+HsjLmMXCbP6uOMzeqkx4PNB1+ETxkgtOizDM9p1uEXTp2K4LnafEyOK1aava5E0OSUN4LXQcmIgFUaCdCMrmnmn9LCIjVQXWTWMyLWfWDmgaqVr1GoyHVRU46nqrXUN0zaHqiqnDNwRNFEQUXTU7W8Sr3TsaibFxjQKYCznYo1DyYqeSJps3UXTtHNYD68nmqzMT1KbXTckxBo7oKorr8kAA4qbaclDSmYk81BrCtCOivyRkVB2TRtkMpiVe2jPRbTKQDiVbu2q6T2c8MQd1WjTY8QLHVJJTa6iZxcOWlhuOFhFnWSSVSx3mB7eGMDMQR8V01N+JMJsCLfMJJJpJbB0u3FM4eq8XPJZDq0SkuCSSFp7qLkklkRzW4FXw4g9vO6ZJVGhFtC1o9fRTbjsEmmZp7XCSSlJlQtbg0E/IXPwXIY5+HrHg5R8xxTJJGtPOce2Mnp7kNLmdQCuczOYdbgpJKrjdr217rWVD5SSkko0ugeUa1/UpklYiEswQpnTpKBelu5Kce9d4QUySpRTKCoPslWHBqg8W2TpK6Y9qj+QS8/snbgT+d0kk0e1Ex4KRyV7cKtx0SSRParW0DRxUxEwckkkDmQDgq3TpJIK3TKBmSSRX/2Q==') no-repeat center center/cover;
+            background-attachment: fixed; /* Parallax Effect */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: #FFCC00;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .btn-primary:hover {
+            background-color: #333;
+            color: #FFCC00;
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+        }
+
+        /* About Section */
+        #about {
+            padding: 60px 20px;
+            text-align: center;
+            background: #fff;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        #about h2 {
+            margin-bottom: 20px;
+        }
+
+        /* Products Section */
+        #products {
+            padding: 60px 20px;
+            background: #f9f9f9;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .product {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            text-align: center;
+            width: 30%;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        /* Contact Section */
+        #contact {
+            padding: 60px 20px;
+            background: #fff;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+
+        button {
+            background-color: #FFCC00;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: #fff;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .social-media a:hover {
+            color: #FFCC00;
+        }
+
+        .social-media i {
+            margin: 0 10px;
+            font-size: 24px;
+        }
+
+        .social-media i:hover {
+            color: #FFCC00;
+        }
+
+        /* Back to Top Button */
+        #backToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FFCC00;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+
+        #backToTopBtn:hover {
+            background-color: #333;
+            color: #FFCC00;
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .product {
+                width: 45%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .product {
+                width: 100%;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">E STAR Oil</div>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Chase the Race with E STAR Engine Oil</h1>
+            <p>High-performance oils for extreme conditions and everyday driving.</p>
+            <a href="#products" class="btn-primary">Explore Our Products</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About E STAR</h2>
+        <p>E STAR Premium Oil offers cutting-edge lubrication solutions, engineered for high performance in various driving conditions, from daily commutes to demanding racing environments.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-list">
+            <div class="product">
+                <img src="image/ppp.jpg" alt="E STAR Engine Oil 1">
+                <h3>E STAR 1L</h3>
+                <p>High-performance engine oil for everyday driving.</p>
+            </div>
+            <div class="product">
+                <img src="image/ppp2.jpg" alt="E STAR Engine Oil 2">
+                <h3>E STAR 4L</h3>
+                <p>Superior protection for high-performance engines.</p>
+            </div>
+            <div class="product">
+                <img src="image/ppp.jpg" alt="E STAR Engine Oil 3">
+                <h3>E STAR Synthetic Blend</h3>
+                <p>Enhanced performance for extreme conditions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="thankyou.html" target="_blank" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 E STAR Oil. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://www.facebook.com/estar.engine.oil/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/eeestar.789/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="https://twitter.com/yourpage" target="_blank"><i class="fab fa-twitter"></i></a> -->
+            <a href="https://wa.me/923112474278" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="backToTopBtn" title="Go to top">↑</button>
+
+    <!-- JavaScript for Back to Top Button -->
+    <script>
+        // Get the button
+        let backToTopBtn = document.getElementById("backToTopBtn");
+
+        // Show the button when scrolling down 100px
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                backToTopBtn.style.display = "block";
+            } else {
+                backToTopBtn.style.display = "none";
+            }
+        };
+
+        // Scroll to the top of the document
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            // Display the confirmation message
+            document.getElementById('confirmationMessage').style.display = 'block';
+
+            // Optionally, you can reset the form
+            this.reset();
+        });   
+    </script>
+</body>
+</html>
